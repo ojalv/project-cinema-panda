@@ -1,0 +1,50 @@
+:root {
+  --color-gray: rgb(122, 122, 105);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.logo {
+  max-width: 100px;
+}
+#menu-icon {
+  max-width: 30px;
+  user-select: none;
+}
+
+/*navigation*/
+
+/*slider*/
+.slider.auto.big {
+  height: 30vh;
+  background-color: var(--color-gray);
+}
+
+/*days bilboard*/
+.slider.days.line {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.day-box {
+  min-width: 120px;
+  min-height: 120px;
+  background-color: var(--color-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
