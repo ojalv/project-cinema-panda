@@ -26,3 +26,46 @@ main > section {
   width: 100%;
   aspect-ratio: 16/9;
 }
+
+@media (min-width: 480px) {
+  main {
+    display: grid;
+    grid-template-areas:
+      "poster title"
+      "poster details"
+      "poster details"
+      "synopsis synopsis"
+      "trailer trailer"
+      "showtimes showtimes"
+      "buy-tickets buy-tickets";
+    grid-template-columns: 1fr 4fr;
+  }
+
+  #movie-title {
+    grid-area: title;
+  }
+
+  #movie-poster {
+    grid-area: poster;
+  }
+
+  #movie-details {
+    grid-area: details;
+  }
+
+  #movie-synopsis {
+    grid-area: synopsis;
+  }
+
+  #movie-trailer {
+    grid-area: trailer;
+  }
+
+  #showtimes {
+    grid-area: showtimes;
+  }
+
+  #buy-tickets {
+    grid-area: buy-tickets;
+  }
+}
