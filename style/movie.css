@@ -33,7 +33,6 @@ main > section {
     grid-template-areas:
       "poster title"
       "poster details"
-      "poster details"
       "synopsis synopsis"
       "trailer trailer"
       "showtimes showtimes"
@@ -67,5 +66,22 @@ main > section {
 
   #buy-tickets {
     grid-area: buy-tickets;
+  }
+}
+
+@media (min-width: 992px) {
+  body{
+    display: flex;
+    justify-content: center;
+  }
+  main {
+    display: grid;
+    grid-template-areas:
+      "poster title title title"
+      "poster details details details"
+      "synopsis synopsis trailer trailer"
+      "showtimes showtimes buy-tickets buy-tickets";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1000px;
   }
 }
