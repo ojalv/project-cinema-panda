@@ -13,6 +13,9 @@ main {
 main > section {
   padding: 15px;
 }
+.other-movie-poster {
+  display: none;
+}
 
 #movie-trailer,
 #movie-poster {
@@ -70,10 +73,6 @@ main > section {
 }
 
 @media (min-width: 992px) {
-  body{
-    display: flex;
-    justify-content: center;
-  }
   main {
     display: grid;
     grid-template-areas:
@@ -83,5 +82,29 @@ main > section {
       "showtimes showtimes buy-tickets buy-tickets";
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 1000px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas: "poster-1 main poster-2";
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    grid-template-columns: auto 1000px auto;
+  }
+
+  .other-movie-poster {
+    display: block;
+    width: 100%;
+  }
+
+  #poster-1 {
+    grid-area: poster-1;
+  }
+
+  #poster-2 {
+    grid-area: poster-2;
   }
 }
