@@ -2,43 +2,128 @@
   --color-gray: rgb(122, 122, 105);
 }
 
+/*header*/
 * {
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
 }
 
-/*header*/
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
+    width: 100%;
+    background: var(--color-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 8rem;
 }
-.logo {
-  max-width: 100px;
+
+.logo img {
+    width: 9rem;
 }
-#menu-icon {
-  max-width: 30px;
-  user-select: none;
+
+header .menu-btn {
+    display: none;
+    /* Oculta el input */
 }
+
+/* Icono de menú ???*/
+header .menu-icon {
+    cursor: pointer;
+}
+
+/* Los íconos de abrir y cerrar */
+header .menu-icon span i {
+    font-size: 2.5rem;
+}
+
+header .menu-icon .cerrar {
+    display: none;
+    /* Ocultar el ícono de cerrar inicialmente */
+}
+
+/* Menú oculto inicialmente */
+header .menu {
+    background-color: white;
+    position: absolute;
+    top: 7.9rem;
+    left: 0;
+    width: 100%;
+    max-height: 0; /* Menú oculto por defecto */
+    overflow: hidden; /* Evita que el contenido del menú se vea */
+    transition: max-height 0.3s ease-in-out; /* Animación de expansión */
+    z-index: 9;
+
+}
+
+/* Menú visible cuando el checkbox está marcado */
+header .menu-btn:checked~.menu {
+    max-height: 500px; /* Ajusta este valor según el tamaño del contenido del menú */
+    display: flex;
+    /* Mostrar el menú */
+    flex-direction: column;
+}
+
+/* Los elementos del menú */
+header .menu li {
+    list-style: none;
+    padding: 1rem;
+}
+
+header .menu li:hover {
+    background-color: beige;
+}
+
+
+header .menu li a {
+    color: var(--color-colorRed);
+    text-decoration: none;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+
+/* Al hacer clic en el ícono de menú */
+header .menu-icon.active .cerrar {
+    display: flex; /* Mostrar el ícono de cerrar cuando se activa */
+}
+
+header .menu-icon.active .abrir {
+    display: none;
+    /* Ocultar el ícono de abrir cuando se activa */
+}
+
 
 /*navigation*/
 
 /*slider*/
-.slider.auto.big {
+.container-slider.auto.big {
   height: 30vh;
   background-color: var(--color-gray);
 }
+.billboard .container-title {
+    text-align: center;
+    padding: 1rem 0;
+}
 
-/*days bilboard*/
-.slider.days.line {
+.billboard h2 {
+    font-size: 2.2rem;
+}
+
+.billboard p {
+    font-size: 1.5rem;
+}
+/*days billboard*/
+.container-slider{
   display: flex;
   justify-content: center;
   gap: 10px;
   overflow: hidden;
 }
 
-.day-box {
+.container-slider .day-box {
   min-width: 120px;
   min-height: 120px;
   background-color: var(--color-gray);
@@ -47,4 +132,102 @@ header {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+.container-slider .day-box h3{
+    font-size: 2rem;
+}
+.container-slider .day-box p {
+    font-size: 1.5rem;
+}
+.container-slider .day-box h4 {
+    font-size: 1.2rem;
+}
+
+/*CONTENEDOR DE PELICULAS*/
+.container-card-movie{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   margin: 1.5rem 0;
+}
+.card-movie{
+    background-color: var(--color-gray);
+        width: 30rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 3rem 0;
+        border-radius: 15px;
+}
+.card-movie .img{
+    background-color: antiquewhite;
+    width: 230px;
+    height: 340px;
+    border-radius: 15px;
+}
+
+.card-movie h2{
+    padding: .5rem 0;
+    font-size: 3rem;
+}
+
+.container-info{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+ .info{
+    padding-bottom: 5px;
+}
+.container-info .container-icons .info i,
+.container-info .container-icons .info span{
+    font-size: 1.5rem;
+}
+.container-info .container-icons .info i{
+    padding-right: 5px;
+}
+.container-classification h4{
+    font-size: 1.5rem;
+}
+.container-classification p{
+    background-color: aliceblue;
+    width: 40px;
+    text-align: center;
+    padding: 3px 2px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    
+}
+
+
+/*FOOTER*/
+.container-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0;
+    background-color: var(--color-gray);
+    color: white;
+}
+
+
+.container-redes i{
+    font-size: 2rem; 
+    padding: .5rem;
+
+}
+.container-info-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-info-footer a{
+    font-size: 1.3rem;
 }

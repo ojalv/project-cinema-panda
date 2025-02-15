@@ -5,22 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/styles.css" />
     <title>Proyecto Cinema</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
   </head>
   <body>
+    <!--menú hamburgesa-->
     <header>
-      <img
-        class="logo"
-        src="assets/logo/cinema-logo.jpeg"
-        alt="proyecto-cinema-logo"
-      />
-      <img id="menu-icon" src="assets/svg/menu.svg" alt="menu-svg"/>
+        <a href="#" class="logo"><img src="./assets/logo/cinema-logo.jpeg" alt=""></a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" id="menu-icon" for="menu-btn">
+            <span><i class="fa-solid fa-bars abrir"></i></span>
+            <span><i class="fa-solid fa-x cerrar"></i></span>
+        </label>
+        <ul class="menu">
+            <li><a href="#work">main</a></li>
+            <li><a href="#about">catalog</a></li>
+            <li><a href="#careers">about us</a></li>
+            <li><a href="#contact">reviews</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
     </header>
-    <div class="auto slider big"></div>
+    <!--fin menú hamburgesa-->
+    <div class="container-slider auto big"></div>
     <main>
-      <section class="section billboard">
-        <h2>Lorem ipsum dolor sit.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="slider days line">
+      <section class="billboard">
+        <div class="container-title">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        
+        <div class="container-slider">
           <div class="day-box">
             <h3>lunes</h3>
             <p>20</p>
@@ -58,6 +72,112 @@
           </div>
         </div>
       </section>
+      <section class="container-card-movie">
+        <div class="card-movie">
+            <div class="img"></div> <!--de prueba-->
+            <h2>Titulo</h2>
+            <div class="container-info">
+                <div class="container-icons">
+                    <div class="info">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>25/12/2025</span>
+                    </div>
+                    <div  class="info">
+                        <i class="fa-solid fa-film"></i>
+                        <span>Animación</span>
+                    </div>
+                    <div class="info">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>100 min</span>
+                    </div>
+                </div>
+                <div class="container-classification">
+                    <h4 class="info">Clasificación</h4>
+                    <p>ATP</p>
+                    <h4 class="info">Formato</h4>
+                    <p>2D</p> 
+
+                </div>
+               
+            </div>
+        </div>
+      </section>
+    <section class="container-card-movie">
+        <div class="card-movie">
+            <div class="img"></div> <!--de prueba-->
+            <h2>Titulo</h2>
+            <div class="container-info">
+                <div class="container-icons">
+                    <div class="info">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>25/12/2025</span>
+                    </div>
+                    <div class="info">
+                        <i class="fa-solid fa-film"></i>
+                        <span>Animación</span>
+                    </div>
+                    <div class="info">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>100 min</span>
+                    </div>
+                </div>
+                <div class="container-classification">
+                    <h4 class="info">Clasificación</h4>
+                    <p>ATP</p>
+                    <h4 class="info">Formato</h4>
+                    <p>2D</p>
+    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <section class="container-card-movie">
+        <div class="card-movie">
+            <div class="img"></div> <!--de prueba-->
+            <h2>Titulo</h2>
+            <div class="container-info">
+                <div class="container-icons">
+                    <div class="info">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>25/12/2025</span>
+                    </div>
+                    <div class="info">
+                        <i class="fa-solid fa-film"></i>
+                        <span>Animación</span>
+                    </div>
+                    <div class="info">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>100 min</span>
+                    </div>
+                </div>
+                <div class="container-classification">
+                    <h4 class="info">Clasificación</h4>
+                    <p>ATP</p>
+                    <h4 class="info">Formato</h4>
+                    <p>2D</p>
+    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+      
     </main>
+    <footer class="container-footer">
+        <div><a href="#" class="logo"><img src="./assets/logo/cinema-logo.jpeg" alt=""></a></div>
+        <div class="container-redes">
+             <i class="fa-brands fa-facebook"></i>
+             <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="container-info-footer">
+           
+            <a>Términos y condiciones</a>
+            <a>Políticas de privacidad</a>
+            <a>Preguntas frecuentes</a>
+        </div>
+       
+    </footer>
+    <script src="./js/home.js"></script>
   </body>
 </html>
