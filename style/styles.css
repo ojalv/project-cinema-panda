@@ -21,7 +21,7 @@ header {
 }
 
 .logo img {
-    width: 9rem;
+    width: 12rem;
 }
 
 header .menu-btn {
@@ -99,13 +99,48 @@ header .menu-icon.active .abrir {
 /*navigation*/
 
 /*slider*/
-.container-slider.auto.big {
-  height: 30vh;
-  background-color: var(--color-gray);
-}
+
+ .carousel {
+     overflow: hidden;
+     width: 100%;
+     /* Contenedor del carrusel */
+     background-color: #1e272e;
+     height: 30vh;
+ }
+
+ .img-container {
+     display: flex;
+     /* Para que el contenedor se ajuste al número de imágenes */
+    height: 30vh;
+     animation: slide 20s infinite ease-in-out;
+     /* Animación continua */
+ }
+
+ .img-container img {
+     width: 100vw;
+ }
+
+ @keyframes slide {
+     0% {
+         transform: translateX(0);
+     }
+
+     33.33% {
+         transform: translateX(-100vw);
+     }
+
+     66.66% {
+         transform: translateX(-200vw);
+     }
+
+     100% {
+         transform: translateX(0);
+         /* Vuelve al inicio */
+     }
+ }
 .billboard .container-title {
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .billboard h2 {
@@ -115,34 +150,77 @@ header .menu-icon.active .abrir {
 .billboard p {
     font-size: 1.5rem;
 }
-/*days billboard*/
-.container-slider{
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  overflow: hidden;
-}
+/*SLIDER DIAS CINE*/
+ .container-slider {
+     position: relative;
+     /* Necesario para posicionar las flechas */
+     width: 100%;
+          padding: 0 20px;
+     margin: auto;
+     overflow: hidden;
+     /* Oculta el contenido que se desplaza */
+ }
 
-.container-slider .day-box {
-  min-width: 120px;
-  min-height: 120px;
-  background-color: var(--color-gray);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.container-slider .day-box h3{
-    font-size: 2rem;
-}
-.container-slider .day-box p {
-    font-size: 1.5rem;
-}
-.container-slider .day-box h4 {
-    font-size: 1.2rem;
-}
+ /* Contenedor de los días */
+ .days-wrapper {
+     display: flex;
+     gap: 10px;
+     overflow-x: auto;
+     scroll-behavior: smooth;
+     white-space: nowrap;
+ }
 
+ /* Oculta la barra de scroll */
+ .days-wrapper::-webkit-scrollbar {
+     display: none;
+ }
+
+ /* Cada día */
+ .day-box {
+     min-width: 120px;
+     min-height: 120px;
+     background-color: gray;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+ }
+
+ .day-box h3 {
+     font-size: 2rem;
+ }
+
+ .day-box p {
+     font-size: 1.5rem;
+ }
+
+ .day-box h4 {
+     font-size: 1.2rem;
+ }
+
+ /* Flechas */
+ .flecha-izquierda,
+ .flecha-derecha {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 2rem;
+     cursor: pointer;
+     background: rgba(0, 0, 0, 0.5);
+     color: white;
+     padding: 10px;
+     border-radius: 50%;
+     z-index: 10;
+ }
+
+ .flecha-izquierda {
+     left: 10px;
+ }
+
+ .flecha-derecha {
+     right: 10px;
+ }
 /*CONTENEDOR DE PELICULAS*/
 .container-card-movie{
     width: 100%;
